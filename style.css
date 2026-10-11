@@ -1,0 +1,3771 @@
+
+/* =====================================================
+   MEDWELL LIFECARE — COMPLETE WEBSITE STYLESHEET
+   ===================================================== */
+
+:root {
+  --green: #007d5b;
+  --green-dark: #064d3d;
+  --green-deep: #063d32;
+  --green-light: #e8fbf2;
+  --mint: #a8f3d3;
+  --text: #172e28;
+  --muted: #647b74;
+  --border: #dcece5;
+  --white: #ffffff;
+  --background: #f7fbf9;
+  --shadow: 0 15px 45px rgba(4, 58, 42, 0.08);
+  --radius: 22px;
+  --header-height: 100px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 105px;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+button,
+.btn {
+  font-family: "Manrope", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: min(1320px, calc(100% - 64px));
+  margin-inline: auto;
+}
+
+.section {
+  padding: 105px 0;
+}
+
+.section-label {
+  display: inline-block;
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 26px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  border: none;
+  border-radius: 12px;
+  padding: 17px 25px;
+  font-size: 14px;
+  font-weight: 800;
+  transition: 0.3s ease;
+}
+
+.btn-primary {
+  background: var(--green);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--green-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 125, 91, 0.2);
+}
+
+.btn-white,
+.btn-light {
+  background: white;
+  color: var(--green-dark);
+}
+
+.btn-white:hover,
+.btn-light:hover {
+  background: var(--green-light);
+  transform: translateY(-3px);
+}
+
+/* =====================================================
+   NAVBAR
+   ===================================================== */
+
+.site-header {
+  width: 100%;
+  height: var(--header-height);
+  background: rgba(255, 255, 255, 0.98);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #edf2ef;
+  transition: box-shadow 0.3s ease;
+}
+
+.site-header.scrolled {
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.07);
+}
+
+.navbar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.medwell-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 90px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.medwell-navbar-logo {
+  display: block !important;
+  width: 125px !important;
+  height: 85px !important;
+  max-width: 125px !important;
+  max-height: 85px !important;
+  object-fit: contain !important;
+  position: static !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: none !important;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-link {
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  color: #3e5750;
+  transition: color 0.25s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--green);
+}
+
+.nav-cta {
+  padding: 16px 23px;
+  white-space: nowrap;
+  margin-left: 2px;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  width: 26px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--green-dark);
+}
+
+/* =====================================================
+   HOME HERO
+   ===================================================== */
+
+.medwell-hero-banner {
+  min-height: 690px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("medwell-hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.medwell-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    rgba(1, 51, 44, 0.72),
+    rgba(0, 111, 94, 0.50),
+    rgba(0, 70, 68, 0.50)
+  );
+  pointer-events: none;
+}
+
+.medwell-banner-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 95px 0;
+  color: white;
+}
+
+.medwell-banner-badge {
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 40px;
+  padding: 12px 25px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 35px;
+}
+
+.medwell-banner-content h1 {
+  max-width: 1100px;
+  margin: 0 auto;
+  font-size: clamp(38px, 5vw, 76px);
+  font-weight: 800;
+  line-height: 1.14;
+  letter-spacing: -0.055em;
+}
+
+.medwell-banner-content h1 span {
+  display: block;
+  color: var(--mint);
+}
+
+.medwell-banner-content > p {
+  max-width: 850px;
+  margin: 30px auto 0;
+  font-size: 17px;
+  line-height: 1.9;
+  color: #f0fff8;
+}
+
+.medwell-banner-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.medwell-banner-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px 25px;
+  border-radius: 11px;
+  font-size: 14px;
+  font-weight: 800;
+  transition: 0.3s ease;
+}
+
+.medwell-banner-btn.primary {
+  background: #00a678;
+  color: white;
+}
+
+.medwell-banner-btn.secondary {
+  background: white;
+  color: var(--green-dark);
+}
+
+.medwell-banner-btn.outline {
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  color: white;
+}
+
+.medwell-banner-btn:hover {
+  transform: translateY(-4px);
+}
+
+.medwell-banner-features {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin-top: 45px;
+  color: #d9ffed;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* =====================================================
+   INTRO STRIP
+   ===================================================== */
+
+.intro-strip {
+  padding: 27px 0;
+  background: var(--green-deep);
+  color: white;
+}
+
+.intro-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.intro-content > p {
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  color: var(--mint);
+}
+
+.intro-points {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.intro-points span:nth-child(even) {
+  color: var(--mint);
+}
+
+/* =====================================================
+   ABOUT US
+   ===================================================== */
+
+.about-section {
+  background: #ffffff;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: 85px;
+}
+
+.about-visual {
+  position: relative;
+  min-width: 0;
+}
+
+.about-image {
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+  border-radius: 28px 120px 28px 28px;
+  background: #e9f5ef;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about-badge {
+  position: absolute;
+  right: -20px;
+  bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  background: var(--green);
+  color: white;
+  padding: 22px 25px;
+  border-radius: 15px;
+  font-size: 13px;
+  font-weight: 800;
+  box-shadow: var(--shadow);
+}
+
+.about-badge span {
+  font-size: 23px;
+}
+
+.about-content {
+  min-width: 0;
+}
+
+.about-content h2 {
+  font-size: clamp(34px, 3.5vw, 54px);
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+.about-content h2 span {
+  color: var(--green);
+}
+
+.about-content > p {
+  font-size: 15px;
+  line-height: 2;
+  color: var(--muted);
+  margin-bottom: 23px;
+}
+
+.about-features {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 24px;
+  margin-top: 32px;
+}
+
+.about-features > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.feature-check {
+  width: 27px;
+  height: 27px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--green-light);
+  color: var(--green);
+  display: grid;
+  place-items: center;
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  color: var(--green);
+  font-weight: 800;
+  margin-top: 38px;
+  border-bottom: 1px solid #8be3bc;
+  padding-bottom: 7px;
+}
+
+/* =====================================================
+   MEDICAL PRODUCTS
+   ===================================================== */
+
+.products-section {
+  background: #f5fbf8;
+}
+
+.section-heading {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 60px;
+  align-items: end;
+  margin-bottom: 48px;
+}
+
+.section-heading h2,
+.dental-heading h2 {
+  font-size: clamp(34px, 3.5vw, 52px);
+  font-weight: 800;
+}
+
+.section-heading h2 span,
+.dental-heading h2 span {
+  color: var(--green);
+}
+
+.section-heading > p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.9;
+  padding-bottom: 5px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 27px;
+}
+
+.product-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 21px;
+  overflow: hidden;
+  transition: 0.35s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-7px);
+  box-shadow: var(--shadow);
+}
+
+.product-image {
+  width: 100%;
+  height: 235px;
+  flex-shrink: 0;
+  overflow: hidden;
+  background: #e9f2ee;
+}
+
+.product-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.06);
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 28px;
+}
+
+.product-number {
+  color: var(--green);
+  font-size: 11px;
+  letter-spacing: 1.2px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.product-info h3 {
+  font-size: 20px;
+  margin-bottom: 13px;
+  letter-spacing: -0.025em;
+}
+
+.product-info p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.9;
+  margin-bottom: 30px;
+}
+
+.product-link {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  margin-top: auto;
+  border: none;
+  background: none;
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 800;
+  transition: 0.2s ease;
+}
+
+.product-link:hover {
+  color: var(--green-dark);
+  transform: translateX(4px);
+}
+
+/* PRODUCT 06 */
+
+.product-custom {
+  position: relative;
+  min-height: 460px;
+  background: linear-gradient(
+    145deg,
+    #064f3e,
+    #008562
+  );
+  color: white;
+  padding: 38px;
+  justify-content: center;
+}
+
+.product-custom::after {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border: 35px solid rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  right: -100px;
+  bottom: -110px;
+  pointer-events: none;
+}
+
+.custom-product-content {
+  position: relative;
+  z-index: 1;
+}
+
+.custom-plus {
+  display: block;
+  font-size: 42px;
+  color: #8ef3c9;
+  margin-bottom: 32px;
+}
+
+.product-custom h3 {
+  font-size: 27px;
+  line-height: 1.4;
+  margin-bottom: 18px;
+}
+
+.product-custom p {
+  color: #e1fff0;
+  font-size: 14px;
+  line-height: 1.9;
+  margin-bottom: 28px;
+}
+
+/* =====================================================
+   DENTAL SECTION
+   ===================================================== */
+
+.dental-section {
+  background: #ffffff;
+}
+
+.dental-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 35px;
+  margin-bottom: 50px;
+}
+
+.dental-heading > div {
+  max-width: 850px;
+}
+
+.dental-heading p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.9;
+  max-width: 740px;
+  margin-top: 20px;
+}
+
+.dental-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 27px;
+}
+
+.dental-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 21px;
+  background: #ffffff;
+  transition: 0.3s ease;
+}
+
+.dental-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+
+.dental-image {
+  height: 230px;
+  overflow: hidden;
+  background: #edf7f2;
+}
+
+.dental-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s ease;
+}
+
+.dental-card:hover .dental-image img {
+  transform: scale(1.05);
+}
+
+.dental-details {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.dental-details > span {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--green);
+  letter-spacing: 1.2px;
+  margin-bottom: 14px;
+}
+
+.dental-details h3 {
+  font-size: 20px;
+  margin-bottom: 14px;
+}
+
+.dental-details p {
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+.dental-enquiry-card {
+  background: linear-gradient(
+    145deg,
+    #063e32,
+    #008462
+  );
+  color: white;
+  padding: 38px;
+  justify-content: center;
+  min-height: 450px;
+}
+
+.dental-enquiry-icon {
+  font-size: 43px;
+  color: #9bf5d0;
+  margin-bottom: 32px;
+}
+
+.dental-enquiry-card h3 {
+  font-size: 27px;
+  line-height: 1.4;
+  margin-bottom: 18px;
+}
+
+.dental-enquiry-card p {
+  font-size: 14px;
+  color: #e2fff1;
+  line-height: 1.9;
+  margin-bottom: 30px;
+}
+
+/* =====================================================
+   WHY MEDWELL
+   ===================================================== */
+
+.why-section {
+  position: relative;
+  background:
+    linear-gradient(
+      rgba(235, 255, 246, 0.30),
+      rgba(235, 255, 246, 0.30)
+    ),
+    url("why-medwell-bg.png") center / cover no-repeat;
+  overflow: hidden;
+}
+
+.why-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.18);
+  pointer-events: none;
+}
+
+.why-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.center-heading {
+  max-width: 880px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.center-heading h2 {
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 800;
+}
+
+.center-heading h2 span {
+  color: var(--green);
+}
+
+.center-heading p {
+  max-width: 720px;
+  margin: 25px auto 0;
+  font-size: 15px;
+  color: #536e64;
+  line-height: 1.9;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.why-card {
+  padding: 33px 28px;
+  border-radius: 20px;
+  background: rgba(225, 250, 239, 0.92);
+  border: 1px solid rgba(92, 193, 148, 0.35);
+  backdrop-filter: blur(12px);
+  min-height: 285px;
+  transition: 0.3s ease;
+}
+
+.why-card:nth-child(even) {
+  background: rgba(207, 243, 226, 0.94);
+}
+
+.why-card:hover {
+  background: #bdf0d6;
+  transform: translateY(-7px);
+  box-shadow: 0 15px 35px rgba(0, 85, 62, 0.1);
+}
+
+.why-icon {
+  width: 65px;
+  height: 65px;
+  display: grid;
+  place-items: center;
+  background: #eafff4;
+  color: var(--green);
+  border-radius: 16px;
+  font-size: 28px;
+  margin-bottom: 32px;
+}
+
+.why-card h3 {
+  font-size: 17px;
+  margin-bottom: 14px;
+}
+
+.why-card p {
+  color: #56746a;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* =====================================================
+   CENTERED CTA
+   ===================================================== */
+
+.cta-section {
+  padding: 90px 0 110px;
+  background: #ffffff;
+}
+
+.cta-box {
+  position: relative;
+  min-height: 470px;
+  padding: 75px 60px;
+  background: linear-gradient(
+    110deg,
+    #064b3b,
+    #008c67
+  );
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: auto;
+  color: white;
+}
+
+.cta-content > span {
+  display: block;
+  color: var(--mint);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.cta-content h2 {
+  font-size: clamp(32px, 4vw, 55px);
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 25px;
+}
+
+.cta-content p {
+  max-width: 750px;
+  margin: 0 auto 35px;
+  font-size: 16px;
+  line-height: 1.9;
+  color: #e7fff4;
+}
+
+.cta-art {
+  position: absolute;
+  right: 0;
+  top: -120px;
+  font-size: 480px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.055);
+  pointer-events: none;
+}
+
+/* =====================================================
+   CONTACT
+   ===================================================== */
+
+.contact-section {
+  position: relative;
+  background:
+    linear-gradient(
+      110deg,
+      rgba(3, 70, 55, 0.93),
+      rgba(12, 120, 93, 0.78)
+    ),
+    url("medwell-contact.png") center / cover no-repeat;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 75px;
+}
+
+.contact-info {
+  color: white;
+}
+
+.contact-info .section-label {
+  color: #a5f8d2;
+}
+
+.contact-info h2 {
+  font-size: clamp(35px, 3.5vw, 52px);
+  margin-bottom: 30px;
+}
+
+.contact-info h2 span {
+  color: var(--mint);
+}
+
+.contact-info > p {
+  color: #e0fff0;
+  font-size: 15px;
+  line-height: 2;
+  margin-bottom: 45px;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.contact-icon {
+  width: 55px;
+  height: 55px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: #e9fff4;
+  color: var(--green);
+  font-size: 22px;
+}
+
+.contact-method > div:last-child {
+  min-width: 0;
+}
+
+.contact-method span {
+  display: block;
+  color: #b8e8d6;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.contact-method a,
+.contact-method strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.contact-form-wrap {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 25px;
+  padding: 43px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.08);
+}
+
+.form-top {
+  margin-bottom: 32px;
+}
+
+.form-top h3 {
+  font-size: 27px;
+  margin-bottom: 12px;
+}
+
+.form-top p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 800;
+  margin-bottom: 9px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 14px 16px;
+  border: 1px solid #d8e8df;
+  border-radius: 10px;
+  outline: none;
+  background: #fbfefd;
+  color: var(--text);
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #00aa79;
+  box-shadow: 0 0 0 3px rgba(0, 170, 121, 0.10);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 125px;
+}
+
+.form-submit {
+  width: 100%;
+  padding: 19px;
+}
+
+.form-note {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 17px;
+  text-align: center;
+  line-height: 1.7;
+}
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+.footer {
+  background: #063e32;
+  color: white;
+  padding: 75px 0 0;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.25fr;
+  gap: 50px;
+  padding-bottom: 60px;
+}
+
+.footer-brand h3 {
+  font-size: 27px;
+  margin-bottom: 17px;
+}
+
+.footer-brand h3 span {
+  color: #9cf5ce;
+}
+
+.footer-brand p {
+  color: #bbd9cd;
+  font-size: 13px;
+  line-height: 1.9;
+  margin-bottom: 12px;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 13px;
+  min-width: 0;
+}
+
+.footer-col h4 {
+  font-size: 15px;
+  margin-bottom: 13px;
+}
+
+.footer-col a,
+.footer-col span {
+  color: #bbd9cd;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.footer-col a:hover {
+  color: #a6ffd7;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 23px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  color: #b8d7ca;
+  font-size: 12px;
+}
+
+/* =====================================================
+   FLOATING WHATSAPP
+   ===================================================== */
+
+.whatsapp-float {
+  position: fixed;
+  right: 30px;
+  bottom: 27px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #20ce67;
+  color: white;
+  z-index: 1100;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
+  transition: 0.3s ease;
+}
+
+.whatsapp-float svg {
+  width: 31px;
+  height: 31px;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-5px);
+}
+
+/* =====================================================
+   BACK TO TOP
+   ===================================================== */
+
+.back-to-top {
+  position: fixed;
+  right: 37px;
+  bottom: 103px;
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 12px;
+  background: var(--green-dark);
+  color: white;
+  font-size: 24px;
+  z-index: 1090;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: 0.3s ease;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* =====================================================
+   FLOATING REQUEST CATALOGUE BUTTON
+   ===================================================== */
+
+.catalogue-float-btn {
+  position: fixed;
+  right: 30px;
+  bottom: 178px;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 17px 25px;
+  border: none;
+  border-radius: 50px;
+  background: var(--green);
+  color: white;
+  font-size: 14px;
+  font-weight: 800;
+  box-shadow: 0 12px 35px rgba(0, 68, 49, 0.22);
+  transition: 0.3s ease;
+}
+
+.catalogue-float-btn:hover {
+  background: var(--green-dark);
+  transform: translateY(-4px);
+}
+
+.catalogue-float-icon {
+  font-size: 18px;
+}
+
+/* =====================================================
+   REQUEST CATALOGUE MODAL
+   ===================================================== */
+
+.catalogue-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 5000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.catalogue-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.catalogue-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 31, 24, 0.78);
+  backdrop-filter: blur(7px);
+}
+
+.catalogue-modal-box {
+  position: relative;
+  z-index: 1;
+  width: min(760px, 100%);
+  max-height: calc(100vh - 50px);
+  overflow-y: auto;
+  background: white;
+  border-radius: 25px;
+  padding: 45px;
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.25);
+  transform: translateY(25px) scale(0.97);
+  transition: transform 0.3s ease;
+}
+
+.catalogue-modal.is-open .catalogue-modal-box {
+  transform: translateY(0) scale(1);
+}
+
+.catalogue-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: #e9f7ef;
+  color: var(--green-dark);
+  font-size: 28px;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+}
+
+.catalogue-close:hover {
+  background: #d2f1e2;
+}
+
+.catalogue-modal-header {
+  padding-right: 35px;
+  margin-bottom: 30px;
+}
+
+.catalogue-tag {
+  display: inline-block;
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.catalogue-modal-header h2 {
+  font-size: clamp(30px, 3vw, 43px);
+  margin-bottom: 16px;
+}
+
+.catalogue-modal-header h2 span {
+  color: var(--green);
+}
+
+.catalogue-modal-header p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.catalogue-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.catalogue-field {
+  margin-bottom: 20px;
+}
+
+.catalogue-field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 800;
+  margin-bottom: 9px;
+}
+
+.catalogue-field input,
+.catalogue-field select,
+.catalogue-field textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 14px 16px;
+  border: 1px solid #d7e9df;
+  border-radius: 10px;
+  outline: none;
+  background: #fbfefd;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.catalogue-field input:focus,
+.catalogue-field select:focus,
+.catalogue-field textarea:focus {
+  border-color: #00a878;
+  box-shadow: 0 0 0 3px rgba(0, 168, 120, 0.10);
+}
+
+.catalogue-field textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.catalogue-submit {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border: none;
+  border-radius: 11px;
+  padding: 18px 22px;
+  background: var(--green);
+  color: white;
+  font-size: 14px;
+  font-weight: 800;
+  transition: 0.3s ease;
+}
+
+.catalogue-submit:hover {
+  background: var(--green-dark);
+}
+
+.catalogue-privacy {
+  text-align: center;
+  margin-top: 17px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* =====================================================
+   REVEAL ANIMATIONS
+   ===================================================== */
+
+.reveal {
+  opacity: 1;
+  transform: none;
+}
+
+/* =====================================================
+   RESPONSIVE — TABLETS
+   ===================================================== */
+
+@media (max-width: 1150px) {
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .nav-link {
+    font-size: 12px;
+  }
+
+  .about-grid {
+    gap: 45px;
+  }
+
+  .products-grid,
+  .dental-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-grid {
+    gap: 35px;
+  }
+
+  .footer-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+/* =====================================================
+   RESPONSIVE — MOBILE NAVIGATION
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+  :root {
+    --header-height: 82px;
+  }
+
+  .container {
+    width: min(100% - 36px, 1320px);
+  }
+
+  .section {
+    padding: 75px 0;
+  }
+
+  .medwell-brand {
+    width: 115px;
+    height: 76px;
+  }
+
+  .medwell-navbar-logo {
+    width: 105px !important;
+    height: 72px !important;
+    max-width: 105px !important;
+    max-height: 72px !important;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: white;
+    padding: 20px 25px 28px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.08);
+    max-height: calc(100vh - 82px);
+    overflow-y: auto;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-link {
+    font-size: 14px;
+    padding: 13px 0;
+    border-bottom: 1px solid #edf3ef;
+  }
+
+  .nav-cta {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+
+  .about-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-visual {
+    max-width: 650px;
+  }
+
+  .about-image {
+    height: 480px;
+  }
+
+  .section-heading {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .dental-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .intro-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro-points {
+    justify-content: center;
+  }
+
+}
+
+/* =====================================================
+   RESPONSIVE — SMALL SCREENS
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+  .container {
+    width: calc(100% - 30px);
+  }
+
+  .section {
+    padding: 65px 0;
+  }
+
+  .medwell-hero-banner {
+    min-height: 650px;
+  }
+
+  .medwell-banner-content {
+    padding: 75px 0;
+  }
+
+  .medwell-banner-content h1 {
+    font-size: clamp(34px, 8vw, 46px);
+  }
+
+  .medwell-banner-content > p {
+    font-size: 14px;
+  }
+
+  .medwell-banner-badge {
+    font-size: 10px;
+    letter-spacing: 1px;
+    padding: 11px 15px;
+  }
+
+  .medwell-banner-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .medwell-banner-btn {
+    width: 100%;
+  }
+
+  .medwell-banner-features {
+    gap: 12px;
+    font-size: 11px;
+  }
+
+  .about-image {
+    height: 350px;
+    border-radius: 20px 70px 20px 20px;
+  }
+
+  .about-badge {
+    right: 10px;
+    bottom: -18px;
+    padding: 15px;
+    font-size: 11px;
+  }
+
+  .about-content {
+    padding-top: 30px;
+  }
+
+  .about-content h2,
+  .section-heading h2,
+  .dental-heading h2,
+  .center-heading h2,
+  .contact-info h2 {
+    font-size: 34px;
+  }
+
+  .about-features {
+    grid-template-columns: 1fr;
+  }
+
+  .products-grid,
+  .dental-grid,
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-image,
+  .dental-image {
+    height: 235px;
+  }
+
+  .why-card {
+    min-height: auto;
+  }
+
+  .cta-section {
+    padding: 60px 0;
+  }
+
+  .cta-box {
+    min-height: 420px;
+    padding: 55px 25px;
+    border-radius: 22px;
+  }
+
+  .cta-content h2 {
+    font-size: 32px;
+  }
+
+  .cta-content p {
+    font-size: 14px;
+  }
+
+  .cta-art {
+    font-size: 300px;
+    top: -60px;
+  }
+
+  .contact-form-wrap {
+    padding: 27px 20px;
+  }
+
+  .form-row,
+  .catalogue-form-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .catalogue-float-btn {
+    right: 15px;
+    bottom: 170px;
+    padding: 13px 17px;
+    font-size: 12px;
+  }
+
+  .whatsapp-float {
+    right: 18px;
+    bottom: 20px;
+    width: 55px;
+    height: 55px;
+  }
+
+  .back-to-top {
+    right: 22px;
+    bottom: 90px;
+  }
+
+  .catalogue-modal {
+    padding: 12px;
+  }
+
+  .catalogue-modal-box {
+    padding: 35px 22px;
+    max-height: calc(100vh - 24px);
+    border-radius: 18px;
+  }
+
+  .catalogue-modal-header h2 {
+    font-size: 30px;
+  }
+
+}
+
+/* =====================================================
+   ACCESSIBILITY
+   ===================================================== */
+
+:focus-visible {
+  outline: 3px solid #29d39a;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+
+}
+
+/* =====================================================
+   MEDWELL LIFECARE
+   PREMIUM DENTAL CONSUMABLES SECTION
+===================================================== */
+
+.dental-section {
+  position: relative;
+  padding: 115px 0 125px;
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(0, 150, 106, 0.055),
+      transparent 38%
+    ),
+    linear-gradient(180deg, #ffffff, #f5faf8);
+  overflow: hidden;
+}
+
+/* SECTION HEADER */
+
+.dental-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 45px;
+  margin-bottom: 55px;
+}
+
+.dental-heading > div {
+  max-width: 870px;
+}
+
+.dental-heading .section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  color: #008260;
+  margin-bottom: 22px;
+}
+
+.dental-heading .section-label::before {
+  content: "";
+  width: 30px;
+  height: 2px;
+  background: #00a779;
+}
+
+.dental-heading h2 {
+  font-size: clamp(38px, 4.1vw, 61px);
+  font-weight: 800;
+  line-height: 1.17;
+  letter-spacing: -0.055em;
+  color: #142e26;
+}
+
+.dental-heading h2 span {
+  color: #008562;
+}
+
+.dental-heading p {
+  max-width: 720px;
+  margin-top: 25px;
+  color: #657e74;
+  font-size: 16px;
+  line-height: 1.95;
+}
+
+.dental-heading > .btn {
+  flex-shrink: 0;
+  border-radius: 14px;
+  padding: 19px 28px;
+  box-shadow: 0 12px 28px rgba(0, 120, 88, 0.15);
+}
+
+/* PRODUCT GRID */
+
+.dental-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  align-items: stretch;
+}
+
+/* PREMIUM CARD */
+
+.dental-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e0eee7;
+  border-radius: 24px;
+  box-shadow: 0 8px 30px rgba(3, 67, 48, 0.035);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.dental-card:hover {
+  transform: translateY(-9px);
+  border-color: #b5e5cf;
+  box-shadow: 0 22px 55px rgba(3, 76, 54, 0.12);
+}
+
+/* IMAGE */
+
+.dental-image {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  background: #eaf5ef;
+}
+
+.dental-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 55%,
+    rgba(0, 57, 42, 0.12)
+  );
+  pointer-events: none;
+}
+
+.dental-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s ease;
+}
+
+.dental-card:hover .dental-image img {
+  transform: scale(1.07);
+}
+
+/* CARD DETAILS */
+
+.dental-details {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 32px 30px 30px;
+}
+
+.dental-details > span {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 20px;
+  color: #008765;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.dental-details > span::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #00ac7b;
+}
+
+.dental-details h3 {
+  margin-bottom: 16px;
+  color: #17362d;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: -0.035em;
+}
+
+.dental-details p {
+  margin-bottom: 30px;
+  color: #71857d;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* ENQUIRY BUTTON */
+
+.dental-details .product-link {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 10px;
+  margin-top: auto;
+  padding: 13px 0 3px;
+  border: 0;
+  border-bottom: 2px solid #b9e9d4;
+  background: transparent;
+  color: #00825e;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.dental-details .product-link:hover {
+  color: #004d3c;
+  border-color: #00825e;
+  transform: translateX(4px);
+}
+
+/* =====================================================
+   PREMIUM BULK ENQUIRY CARD
+===================================================== */
+
+.dental-enquiry-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 515px;
+  padding: 42px 38px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 24px;
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(110, 255, 189, 0.18),
+      transparent 45%
+    ),
+    linear-gradient(
+      145deg,
+      #043b30 0%,
+      #00664d 55%,
+      #008b66 100%
+    );
+  color: #ffffff;
+}
+
+.dental-enquiry-card::before {
+  content: "+";
+  position: absolute;
+  right: -15px;
+  top: -105px;
+  color: rgba(255, 255, 255, 0.055);
+  font-family: Arial, sans-serif;
+  font-size: 370px;
+  font-weight: 800;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.dental-enquiry-card::after {
+  content: "";
+  position: absolute;
+  right: -90px;
+  bottom: -125px;
+  width: 270px;
+  height: 270px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.dental-enquiry-icon {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 78px;
+  height: 78px;
+  margin-bottom: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #a9ffdc;
+  font-size: 43px;
+  backdrop-filter: blur(10px);
+}
+
+.dental-enquiry-card h3 {
+  position: relative;
+  z-index: 1;
+  max-width: 340px;
+  margin-bottom: 22px;
+  color: white;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: -0.04em;
+}
+
+.dental-enquiry-card p {
+  position: relative;
+  z-index: 1;
+  max-width: 350px;
+  margin-bottom: 35px;
+  color: #d6f7e8;
+  font-size: 14px;
+  line-height: 1.95;
+}
+
+.dental-enquiry-card .btn {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-height: 62px;
+  padding: 17px 20px;
+  border-radius: 13px;
+  background: #ffffff;
+  color: #005742;
+  font-size: 14px;
+  font-weight: 800;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.dental-enquiry-card .btn:hover {
+  background: #d8ffeb;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* =====================================================
+   RESPONSIVE DENTAL SECTION
+===================================================== */
+
+@media (max-width: 1150px) {
+
+  .dental-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dental-heading h2 {
+    font-size: 45px;
+  }
+
+}
+
+@media (max-width: 900px) {
+
+  .dental-section {
+    padding: 85px 0;
+  }
+
+  .dental-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .dental-heading > .btn {
+    align-self: flex-start;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .dental-section {
+    padding: 70px 0;
+  }
+
+  .dental-heading {
+    margin-bottom: 35px;
+  }
+
+  .dental-heading h2 {
+    font-size: 35px;
+  }
+
+  .dental-heading p {
+    font-size: 14px;
+  }
+
+  .dental-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .dental-image {
+    height: 235px;
+  }
+
+  .dental-details {
+    padding: 27px 24px;
+  }
+
+  .dental-details h3 {
+    font-size: 20px;
+  }
+
+  .dental-enquiry-card {
+    min-height: 430px;
+    padding: 35px 28px;
+  }
+
+  .dental-enquiry-card h3 {
+    font-size: 27px;
+  }
+
+  .dental-enquiry-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 28px;
+  }
+
+}
+
+/* =========================================================
+   MEDWELL LIFECARE
+   PREMIUM DENTAL SECTION - FINAL CSS OVERRIDE
+   Paste at the VERY END of style.css
+========================================================= */
+
+/* 1. MAIN DENTAL SECTION */
+
+#dental,
+.dental-section {
+  position: relative;
+  padding: 110px 0 120px;
+  background:
+    radial-gradient(
+      circle at 92% 8%,
+      rgba(16, 185, 129, 0.09),
+      transparent 35%
+    ),
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f3faf7 100%
+    );
+  overflow: hidden;
+}
+
+/* 2. SECTION HEADING */
+
+#dental .dental-heading,
+.dental-section .dental-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 35px;
+  margin-bottom: 55px;
+}
+
+#dental .dental-heading > div,
+.dental-section .dental-heading > div {
+  max-width: 900px;
+}
+
+#dental .section-label,
+.dental-section .section-label {
+  display: inline-block;
+  margin-bottom: 22px;
+  color: #008765;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+#dental .dental-heading h2,
+.dental-section .dental-heading h2 {
+  margin: 0;
+  color: #15342b;
+  font-size: clamp(36px, 4.3vw, 62px);
+  font-weight: 800;
+  line-height: 1.17;
+  letter-spacing: -0.045em;
+}
+
+#dental .dental-heading h2 span,
+.dental-section .dental-heading h2 span {
+  color: #008764;
+}
+
+#dental .dental-heading p,
+.dental-section .dental-heading p {
+  max-width: 750px;
+  margin-top: 24px;
+  color: #647c73;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* DENTAL ENQUIRY HEADER BUTTON */
+
+#dental .dental-heading .btn,
+.dental-section .dental-heading .btn {
+  flex-shrink: 0;
+  padding: 19px 28px;
+  border-radius: 14px;
+  background: #008462;
+  color: #ffffff;
+  font-weight: 700;
+  box-shadow: 0 12px 28px rgba(0, 110, 82, 0.16);
+  transition: all 0.3s ease;
+}
+
+#dental .dental-heading .btn:hover,
+.dental-section .dental-heading .btn:hover {
+  background: #005f49;
+  transform: translateY(-3px);
+}
+
+/* 3. DENTAL PRODUCTS GRID */
+
+#dental .dental-grid,
+.dental-section .dental-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  align-items: stretch;
+}
+
+/* 4. PREMIUM DENTAL CARDS */
+
+#dental .dental-card,
+.dental-section .dental-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #dcece4;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 8px 30px rgba(0, 64, 45, 0.045);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+#dental .dental-card:hover,
+.dental-section .dental-card:hover {
+  transform: translateY(-9px);
+  border-color: #a9dfc6;
+  box-shadow: 0 24px 55px rgba(0, 75, 52, 0.13);
+}
+
+/* 5. ALL FIVE PRODUCT IMAGES */
+
+#dental .dental-image,
+.dental-section .dental-image {
+  position: relative;
+  width: 100%;
+  height: 265px;
+  overflow: hidden;
+  background: #eaf4ef;
+  flex-shrink: 0;
+}
+
+#dental .dental-image img,
+.dental-section .dental-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0;
+  transition: transform 0.55s ease;
+}
+
+#dental .dental-card:hover .dental-image img,
+.dental-section .dental-card:hover .dental-image img {
+  transform: scale(1.065);
+}
+
+/* SOFT IMAGE OVERLAY */
+
+#dental .dental-image::after,
+.dental-section .dental-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    transparent 65%,
+    rgba(0, 55, 39, 0.10)
+  );
+  pointer-events: none;
+}
+
+/* 6. CARD CONTENT */
+
+#dental .dental-details,
+.dental-section .dental-details {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 32px 30px 30px;
+}
+
+/* PRODUCT NUMBER / CATEGORY */
+
+#dental .dental-details > span,
+.dental-section .dental-details > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  align-self: flex-start;
+  margin-bottom: 18px;
+  color: #008764;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+#dental .dental-details > span::before,
+.dental-section .dental-details > span::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #00b381;
+}
+
+/* PRODUCT TITLE */
+
+#dental .dental-details h3,
+.dental-section .dental-details h3 {
+  margin: 0 0 15px;
+  color: #17372d;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: -0.025em;
+}
+
+/* PRODUCT DESCRIPTION */
+
+#dental .dental-details p,
+.dental-section .dental-details p {
+  margin: 0 0 30px;
+  color: #70867b;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* 7. PRODUCT ENQUIRY LINKS */
+
+#dental .dental-details .product-link,
+.dental-section .dental-details .product-link {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  justify-content: flex-start;
+  gap: 9px;
+  width: auto;
+  margin-top: auto;
+  padding: 10px 0 5px;
+  border: 0;
+  border-bottom: 2px solid #b9e9d5;
+  border-radius: 0;
+  background: transparent;
+  color: #008462;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: none;
+  transition: all 0.25s ease;
+}
+
+#dental .dental-details .product-link:hover,
+.dental-section .dental-details .product-link:hover {
+  color: #004d3b;
+  border-bottom-color: #008462;
+  background: transparent;
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   8. PREMIUM BULK DENTAL ENQUIRY CARD
+========================================================= */
+
+#dental .dental-enquiry-card,
+.dental-section .dental-enquiry-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 0;
+  min-height: 500px;
+  padding: 42px 38px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  background:
+    radial-gradient(
+      circle at 95% 5%,
+      rgba(116, 255, 190, 0.18),
+      transparent 45%
+    ),
+    linear-gradient(
+      145deg,
+      #063c30 0%,
+      #00644b 55%,
+      #008966 100%
+    );
+  color: #ffffff;
+  box-shadow: 0 15px 40px rgba(0, 89, 65, 0.13);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+#dental .dental-enquiry-card:hover,
+.dental-section .dental-enquiry-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 25px 55px rgba(0, 80, 57, 0.19);
+}
+
+/* BACKGROUND DECORATIVE CROSS */
+
+#dental .dental-enquiry-card::before,
+.dental-section .dental-enquiry-card::before {
+  content: "+";
+  position: absolute;
+  top: -105px;
+  right: -10px;
+  color: rgba(255, 255, 255, 0.055);
+  font-size: 350px;
+  font-weight: 800;
+  line-height: 1;
+  pointer-events: none;
+}
+
+/* DECORATIVE CIRCLE */
+
+#dental .dental-enquiry-card::after,
+.dental-section .dental-enquiry-card::after {
+  content: "";
+  position: absolute;
+  right: -100px;
+  bottom: -125px;
+  width: 270px;
+  height: 270px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* ENQUIRY ICON */
+
+#dental .dental-enquiry-icon,
+.dental-section .dental-enquiry-icon {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 76px;
+  height: 76px;
+  margin-bottom: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #a9ffdb;
+  font-size: 43px;
+  backdrop-filter: blur(8px);
+}
+
+/* ENQUIRY TITLE */
+
+#dental .dental-enquiry-card h3,
+.dental-section .dental-enquiry-card h3 {
+  position: relative;
+  z-index: 2;
+  max-width: 350px;
+  margin: 0 0 22px;
+  color: #ffffff;
+  font-size: 29px;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: -0.035em;
+}
+
+/* ENQUIRY DESCRIPTION */
+
+#dental .dental-enquiry-card p,
+.dental-section .dental-enquiry-card p {
+  position: relative;
+  z-index: 2;
+  max-width: 350px;
+  margin: 0 0 35px;
+  color: #d7f6e9;
+  font-size: 14px;
+  line-height: 1.95;
+}
+
+/* PREMIUM WHITE CTA BUTTON */
+
+#dental .dental-enquiry-card .btn,
+.dental-section .dental-enquiry-card .btn {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 62px;
+  padding: 17px 22px;
+  border: none;
+  border-radius: 13px;
+  background: #ffffff;
+  color: #005642;
+  font-size: 14px;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: none;
+  transition: all 0.3s ease;
+}
+
+#dental .dental-enquiry-card .btn:hover,
+.dental-section .dental-enquiry-card .btn:hover {
+  background: #d9ffec;
+  color: #004735;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================================================
+   9. RESPONSIVE TABLET
+========================================================= */
+
+@media (max-width: 1150px) {
+
+  #dental .dental-grid,
+  .dental-section .dental-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  #dental .dental-heading h2,
+  .dental-section .dental-heading h2 {
+    font-size: clamp(35px, 4vw, 49px);
+  }
+
+}
+
+/* =========================================================
+   10. RESPONSIVE SMALL TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  #dental,
+  .dental-section {
+    padding: 85px 0;
+  }
+
+  #dental .dental-heading,
+  .dental-section .dental-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 26px;
+    margin-bottom: 42px;
+  }
+
+  #dental .dental-heading .btn,
+  .dental-section .dental-heading .btn {
+    align-self: flex-start;
+  }
+
+  #dental .dental-image,
+  .dental-section .dental-image {
+    height: 235px;
+  }
+
+}
+
+/* =========================================================
+   11. RESPONSIVE MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  #dental,
+  .dental-section {
+    padding: 70px 0;
+  }
+
+  #dental .dental-heading,
+  .dental-section .dental-heading {
+    margin-bottom: 35px;
+  }
+
+  #dental .dental-heading h2,
+  .dental-section .dental-heading h2 {
+    font-size: clamp(30px, 8vw, 38px);
+    line-height: 1.2;
+  }
+
+  #dental .dental-heading p,
+  .dental-section .dental-heading p {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+  #dental .dental-grid,
+  .dental-section .dental-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  #dental .dental-image,
+  .dental-section .dental-image {
+    height: 230px;
+  }
+
+  #dental .dental-details,
+  .dental-section .dental-details {
+    padding: 27px 24px 29px;
+  }
+
+  #dental .dental-details h3,
+  .dental-section .dental-details h3 {
+    font-size: 21px;
+  }
+
+  #dental .dental-enquiry-card,
+  .dental-section .dental-enquiry-card {
+    min-height: 420px;
+    padding: 35px 28px;
+  }
+
+  #dental .dental-enquiry-card h3,
+  .dental-section .dental-enquiry-card h3 {
+    font-size: 26px;
+  }
+
+  #dental .dental-enquiry-icon,
+  .dental-section .dental-enquiry-icon {
+    width: 68px;
+    height: 68px;
+    margin-bottom: 28px;
+  }
+
+}
+
+/* =========================================================
+   12. REDUCED MOTION SUPPORT
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  #dental .dental-card,
+  #dental .dental-image img,
+  #dental .dental-enquiry-card,
+  #dental .product-link,
+  .dental-section .dental-card,
+  .dental-section .dental-image img,
+  .dental-section .dental-enquiry-card,
+  .dental-section .product-link {
+    transition: none;
+  }
+
+}
+
+/* =====================================================
+   MEDWELL - FEATURED PRODUCTS SLIDER
+===================================================== */
+
+.medwell-showcase {
+  padding: 90px 0 85px;
+  background:
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(0, 150, 105, 0.10),
+      transparent 55%
+    ),
+    linear-gradient(180deg, #ffffff, #effaf5);
+  overflow: hidden;
+}
+
+.showcase-heading {
+  max-width: 900px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.showcase-eyebrow {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: #008b65;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.showcase-heading h2 {
+  color: #14352b;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+}
+
+.showcase-heading h2 span {
+  color: #008b65;
+}
+
+.showcase-heading p {
+  margin-top: 16px;
+  color: #71847c;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* SLIDER LAYOUT */
+
+.showcase-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.showcase-viewport {
+  min-width: 0;
+  flex: 1;
+  overflow: hidden;
+}
+
+.showcase-track {
+  display: flex;
+  gap: 22px;
+  transition: transform 0.55s ease;
+  will-change: transform;
+}
+
+/* CARDS */
+
+.showcase-card {
+  flex: 0 0 calc((100% - 44px) / 3);
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #deeee5;
+  border-radius: 19px;
+  background: #ffffff;
+  box-shadow: 0 10px 28px rgba(0, 69, 48, 0.07);
+  transition: box-shadow 0.3s ease;
+}
+
+.showcase-card:hover {
+  box-shadow: 0 18px 38px rgba(0, 76, 55, 0.14);
+}
+
+.showcase-image {
+  height: 205px;
+  overflow: hidden;
+  background: #e9f4ef;
+}
+
+.showcase-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.45s ease;
+}
+
+.showcase-card:hover .showcase-image img {
+  transform: scale(1.06);
+}
+
+.showcase-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 185px;
+  padding: 21px 23px 23px;
+}
+
+.showcase-tag {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 6px 9px;
+  border-radius: 6px;
+  background: #e4f8ee;
+  color: #007d59;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.showcase-tag.dental-tag {
+  background: #e4f2ff;
+  color: #1477ba;
+}
+
+.showcase-card h3 {
+  margin: 0 0 18px;
+  color: #15382d;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.showcase-enquire {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #006f51;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.showcase-enquire span {
+  display: grid;
+  place-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #006f51;
+  color: #ffffff;
+}
+
+/* ARROWS */
+
+.showcase-arrow {
+  display: grid;
+  place-items: center;
+  width: 49px;
+  height: 49px;
+  flex: 0 0 49px;
+  border: 1px solid #d9eee4;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #00855f;
+  font-size: 26px;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(0, 80, 57, 0.07);
+  transition: all 0.25s ease;
+}
+
+.showcase-arrow:hover {
+  background: #00855f;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.showcase-arrow:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* PAGINATION DOTS */
+
+.showcase-dots {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 27px;
+}
+
+.showcase-dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #c8e6d8;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.showcase-dot.active {
+  width: 28px;
+  border-radius: 10px;
+  background: #00956d;
+}
+
+/* FOOTER LINKS */
+
+.showcase-footer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px 35px;
+  margin-top: 35px;
+}
+
+.showcase-footer a {
+  color: #007f5e;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.showcase-footer a:hover {
+  text-decoration: underline;
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+  .showcase-card {
+    flex-basis: calc((100% - 22px) / 2);
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+  .medwell-showcase {
+    padding: 65px 0;
+  }
+
+  .showcase-heading {
+    margin-bottom: 30px;
+  }
+
+  .showcase-heading h2 {
+    font-size: 32px;
+  }
+
+  .showcase-slider {
+    gap: 7px;
+  }
+
+  .showcase-card {
+    flex-basis: 100%;
+  }
+
+  .showcase-image {
+    height: 200px;
+  }
+
+  .showcase-arrow {
+    width: 32px;
+    height: 32px;
+    flex-basis: 32px;
+    font-size: 20px;
+  }
+
+  .showcase-card-body {
+    padding: 19px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .showcase-track,
+  .showcase-image img,
+  .showcase-arrow {
+    transition: none;
+  }
+}
+
+/* ==========================================
+   MEDWELL HOME HERO BACKGROUND RESTORE
+   ========================================== */
+
+#home.medwell-hero-banner {
+  position: relative;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(0, 65, 53, 0.78),
+      rgba(0, 125, 100, 0.60),
+      rgba(0, 78, 72, 0.48)
+    ),
+    url("medwell-hero.png");
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+#home .medwell-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  pointer-events: none;
+}
+
+#home .medwell-banner-content {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  #home.medwell-hero-banner {
+    background-position: center;
+  }
+}
+
+/* =============================================
+   MEDWELL PAN INDIA DELIVERY SECTION
+============================================= */
+
+.medwell-delivery-section {
+  padding: 105px 0;
+  background: linear-gradient(
+    135deg,
+    #f0faf5 0%,
+    #ffffff 50%,
+    #eaf8f2 100%
+  );
+}
+
+.delivery-top {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 55px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.delivery-label {
+  display: inline-block;
+  margin-bottom: 22px;
+  color: #008564;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.delivery-intro h2 {
+  max-width: 720px;
+  margin: 0;
+  color: #17382d;
+  font-size: clamp(36px, 4.5vw, 65px);
+  line-height: 1.15;
+  letter-spacing: -2px;
+}
+
+.delivery-intro h2 span {
+  display: block;
+  color: #008b65;
+}
+
+.delivery-intro p {
+  max-width: 610px;
+  margin: 25px 0 32px;
+  color: #657d72;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.delivery-main-btn {
+  display: inline-flex;
+  padding: 18px 27px;
+  border-radius: 13px;
+  background: #008461;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.delivery-main-btn:hover {
+  background: #005d46;
+  transform: translateY(-3px);
+}
+
+.delivery-highlight {
+  padding: 40px;
+  border-radius: 25px;
+  background: linear-gradient(
+    145deg,
+    #073d30,
+    #007e5e
+  );
+  color: #ffffff;
+  box-shadow: 0 25px 50px rgba(0, 90, 65, 0.15);
+}
+
+.delivery-highlight-icon {
+  display: grid;
+  place-items: center;
+  width: 70px;
+  height: 70px;
+  margin-bottom: 35px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #adffda;
+  font-size: 36px;
+}
+
+.delivery-highlight > span {
+  color: #a9f5d5;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.delivery-highlight h3 {
+  margin: 17px 0;
+  color: #ffffff;
+  font-size: 31px;
+  line-height: 1.3;
+}
+
+.delivery-highlight p {
+  color: #d9f2e7;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.delivery-features {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.delivery-feature {
+  padding: 32px 26px;
+  border: 1px solid #d6ebdf;
+  border-radius: 20px;
+  background: #ffffff;
+  transition: 0.3s ease;
+}
+
+.delivery-feature:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 20px 40px rgba(0, 70, 50, 0.08);
+}
+
+.delivery-feature-icon {
+  display: grid;
+  place-items: center;
+  width: 57px;
+  height: 57px;
+  margin-bottom: 25px;
+  border-radius: 15px;
+  background: #e1f8ed;
+  font-size: 25px;
+}
+
+.delivery-feature h3 {
+  margin-bottom: 12px;
+  color: #183b2e;
+  font-size: 18px;
+}
+
+.delivery-feature p {
+  color: #6a8276;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.delivery-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  margin-top: 35px;
+  padding: 30px 35px;
+  border: 1px solid #cde9db;
+  border-radius: 18px;
+  background: #e2f6eb;
+}
+
+.delivery-bottom strong {
+  color: #174a38;
+  font-size: 15px;
+}
+
+.delivery-bottom p {
+  margin-top: 7px;
+  color: #668476;
+  font-size: 13px;
+}
+
+.delivery-bottom a {
+  flex-shrink: 0;
+  color: #007a59;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+@media (max-width: 1000px) {
+  .delivery-top {
+    grid-template-columns: 1fr;
+  }
+
+  .delivery-features {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .medwell-delivery-section {
+    padding: 70px 0;
+  }
+
+  .delivery-intro h2 {
+    font-size: 37px;
+  }
+
+  .delivery-highlight {
+    padding: 30px;
+  }
+
+  .delivery-features {
+    grid-template-columns: 1fr;
+  }
+
+  .delivery-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px;
+  }
+}
+
+/* =================================================
+   MEDWELL LIFECARE - PREMIUM PAN INDIA BANNER
+================================================= */
+
+.medwell-delivery-banner {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 720px;
+  overflow: hidden;
+
+  background-color: #075446;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(3, 43, 37, 0.92) 0%,
+      rgba(3, 56, 46, 0.84) 31%,
+      rgba(3, 61, 49, 0.48) 54%,
+      rgba(3, 61, 49, 0.08) 80%,
+      rgba(3, 61, 49, 0.02) 100%
+    ),
+    url("./pan-india.png");
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* Soft premium overlay */
+
+.delivery-banner-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.05) 0%,
+      transparent 65%,
+      rgba(0, 48, 37, 0.25) 100%
+    );
+}
+
+/* MAIN CONTENT */
+
+.delivery-banner-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding-top: 105px;
+  padding-bottom: 115px;
+}
+
+.delivery-banner-content {
+  max-width: 660px;
+}
+
+/* EYEBROW */
+
+.delivery-banner-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 100%;
+  padding: 12px 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 50px;
+
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(12px);
+
+  color: #e7fff4;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  line-height: 1.5;
+}
+
+.delivery-status-dot {
+  width: 9px;
+  height: 9px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #7dffbd;
+  box-shadow: 0 0 15px rgba(125, 255, 189, 0.8);
+}
+
+/* HEADLINE */
+
+.delivery-banner-content h2 {
+  margin: 30px 0 24px;
+
+  color: #ffffff;
+  font-size: clamp(46px, 5.4vw, 78px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -2.5px;
+}
+
+.delivery-banner-content h2 span {
+  color: #ffffff;
+}
+
+.delivery-banner-content h2 em {
+  display: block;
+  margin-top: 10px;
+
+  color: #9df5cb;
+  font-style: normal;
+  font-size: 0.76em;
+  font-weight: 750;
+  letter-spacing: -1.5px;
+}
+
+/* DESCRIPTION */
+
+.delivery-banner-description {
+  max-width: 580px;
+  margin: 0;
+
+  color: #f0fff8;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.9;
+}
+
+/* COMPACT FEATURES */
+
+.delivery-banner-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.delivery-mini-feature {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 11px 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 10px;
+
+  background: rgba(4, 65, 51, 0.46);
+  backdrop-filter: blur(10px);
+
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.delivery-mini-icon {
+  display: inline-grid;
+  place-items: center;
+
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+
+  border-radius: 50%;
+  background: #a7f5ce;
+  color: #075642;
+
+  font-size: 12px;
+  font-weight: 900;
+}
+
+/* CTA BUTTONS */
+
+.delivery-banner-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 36px;
+}
+
+.delivery-cta {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+
+  min-height: 55px;
+  padding: 16px 24px;
+
+  border-radius: 11px;
+
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.4;
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.delivery-cta-primary {
+  background: #00a97d;
+  color: #ffffff;
+
+  box-shadow: 0 12px 30px rgba(0, 45, 34, 0.2);
+}
+
+.delivery-cta-primary:hover {
+  background: #00bd8a;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 16px 34px rgba(0, 45, 34, 0.28);
+}
+
+.delivery-cta-whatsapp {
+  border: 1px solid rgba(255, 255, 255, 0.68);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+}
+
+.delivery-cta-whatsapp:hover {
+  background: rgba(255, 255, 255, 0.24);
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+.delivery-cta:focus-visible {
+  outline: 3px solid #a7f5ce;
+  outline-offset: 4px;
+}
+
+/* DELIVERY NOTE */
+
+.delivery-banner-note {
+  max-width: 550px;
+  margin-top: 24px;
+
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* BOTTOM CATEGORY STRIP */
+
+.delivery-banner-bottomline {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+
+  width: 100%;
+  padding: 21px 25px;
+
+  background: rgba(1, 48, 37, 0.88);
+  backdrop-filter: blur(14px);
+
+  color: #eafff4;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.delivery-banner-bottomline span:nth-child(even) {
+  color: #83edb9;
+  font-size: 14px;
+}
+
+/* =============================================
+   TABLET RESPONSIVE
+============================================= */
+
+@media (max-width: 1000px) {
+
+  .medwell-delivery-banner {
+    min-height: 660px;
+
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(3, 43, 37, 0.94) 0%,
+        rgba(3, 56, 46, 0.82) 48%,
+        rgba(3, 61, 49, 0.30) 100%
+      ),
+      url("./pan-india.png");
+
+    background-position: 55% center;
+  }
+
+  .delivery-banner-container {
+    padding-top: 90px;
+    padding-bottom: 95px;
+  }
+
+  .delivery-banner-content {
+    max-width: 600px;
+  }
+
+}
+
+/* =============================================
+   MOBILE RESPONSIVE
+============================================= */
+
+@media (max-width: 650px) {
+
+  .medwell-delivery-banner {
+    min-height: auto;
+
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(3, 43, 37, 0.94) 0%,
+        rgba(3, 56, 46, 0.89) 44%,
+        rgba(3, 61, 49, 0.70) 76%,
+        rgba(3, 61, 49, 0.48) 100%
+      ),
+      url("./pan-india.png");
+
+    background-position: 48% center;
+  }
+
+  .delivery-banner-container {
+    padding-top: 75px;
+    padding-bottom: 85px;
+  }
+
+  .delivery-banner-content {
+    max-width: 100%;
+  }
+
+  .delivery-banner-eyebrow {
+    padding: 10px 13px;
+    font-size: 9px;
+    letter-spacing: 0.8px;
+  }
+
+  .delivery-banner-content h2 {
+    margin-top: 26px;
+    margin-bottom: 20px;
+
+    font-size: clamp(39px, 10vw, 53px);
+    line-height: 1.12;
+    letter-spacing: -1.5px;
+  }
+
+  .delivery-banner-content h2 em {
+    font-size: 0.76em;
+  }
+
+  .delivery-banner-description {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+  .delivery-banner-features {
+    gap: 9px;
+    margin-top: 25px;
+  }
+
+  .delivery-mini-feature {
+    padding: 9px 11px;
+    font-size: 11px;
+  }
+
+  .delivery-banner-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin-top: 30px;
+  }
+
+  .delivery-cta {
+    width: 100%;
+    min-height: 52px;
+    justify-content: space-between;
+  }
+
+  .delivery-banner-note {
+    font-size: 10px;
+  }
+
+  .delivery-banner-bottomline {
+    gap: 10px 14px;
+    padding: 18px 15px;
+    font-size: 9px;
+    letter-spacing: 0.6px;
+    text-align: center;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .delivery-cta {
+    transition: none;
+  }
+}
+
+/* PAN INDIA BANNER - LEFT SPACING FIX */
+
+.medwell-delivery-banner .delivery-banner-container {
+  width: min(1320px, calc(100% - 100px));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Mobile responsive */
+
+@media (max-width: 650px) {
+  .medwell-delivery-banner .delivery-banner-container {
+    width: calc(100% - 36px);
+  }
+}
+
+/* HEADER NAVIGATION SPACING */
+
+@media (min-width: 901px) {
+  .nav-links {
+    gap: 20px;
+  }
+
+  .nav-links .nav-link {
+    font-size: 13px;
+    white-space: nowrap;
+  }
+}
+
+html {
+  scroll-padding-top: 110px;
+}
+
+#pan-india-delivery {
+  scroll-margin-top: 110px;
+}
+
+
+
